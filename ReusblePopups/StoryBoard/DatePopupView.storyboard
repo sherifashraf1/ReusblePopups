@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3y4-a6-rQx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Popup View Controller-->
+        <scene sceneID="XoI-vS-WoF">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="3y4-a6-rQx" customClass="DatePopupViewController" customModule="ReusblePopups" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLy-Pi-I2c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCq-06-dDq">
+                                <rect key="frame" x="136.5" y="157.5" width="327" height="285"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GRV-ec-tHI">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="285"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-Ak-j6m">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                                                <color key="backgroundColor" red="0.957011421319797" green="0.27372838739698718" blue="0.76099132596326646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="48f-63-aZg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="u1B-1D-c6o">
+                                                <rect key="frame" x="3.5" y="50" width="320" height="185"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="587001520.18290603">
+                                                    <!--2019-08-08 23:58:40 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNy-Ms-dtZ">
+                                                <rect key="frame" x="0.0" y="245" width="327" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="ykg-ZN-fhz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <state key="normal" title="Save Date">
+                                                    <color key="titleColor" red="0.95701142130000005" green="0.2737283874" blue="0.76099132599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveDate:" destination="3y4-a6-rQx" eventType="touchUpInside" id="prD-UT-qWJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="KNy-Ms-dtZ" secondAttribute="trailing" id="4c2-eq-kKU"/>
+                                            <constraint firstItem="pjc-Ak-j6m" firstAttribute="leading" secondItem="GRV-ec-tHI" secondAttribute="leading" id="9px-Jc-cWe"/>
+                                            <constraint firstAttribute="trailing" secondItem="pjc-Ak-j6m" secondAttribute="trailing" id="Cc8-dq-R7h"/>
+                                            <constraint firstAttribute="bottom" secondItem="KNy-Ms-dtZ" secondAttribute="bottom" id="X0n-Uc-Qhv"/>
+                                            <constraint firstItem="KNy-Ms-dtZ" firstAttribute="leading" secondItem="GRV-ec-tHI" secondAttribute="leading" id="zqC-PF-WBD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GRV-ec-tHI" secondAttribute="bottom" id="49r-yD-FKE"/>
+                                    <constraint firstItem="GRV-ec-tHI" firstAttribute="top" secondItem="LCq-06-dDq" secondAttribute="top" id="CGl-rB-cCs"/>
+                                    <constraint firstItem="GRV-ec-tHI" firstAttribute="leading" secondItem="LCq-06-dDq" secondAttribute="leading" id="Pcd-TL-yXM"/>
+                                    <constraint firstAttribute="trailing" secondItem="GRV-ec-tHI" secondAttribute="trailing" id="VR5-6e-HEH"/>
+                                    <constraint firstAttribute="height" constant="285" id="dek-lk-hrL"/>
+                                    <constraint firstAttribute="width" constant="327" id="hvQ-Vl-3hS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.88356164383561642" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LCq-06-dDq" firstAttribute="centerX" secondItem="SLy-Pi-I2c" secondAttribute="centerX" id="IOV-XK-uAj"/>
+                            <constraint firstItem="LCq-06-dDq" firstAttribute="centerY" secondItem="SLy-Pi-I2c" secondAttribute="centerY" id="X01-yb-6XB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jio-8I-Ifo"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="u1B-1D-c6o" id="Xis-i9-vbf"/>
+                        <outlet property="saveDate" destination="KNy-Ms-dtZ" id="FfY-jH-6sG"/>
+                        <outlet property="titleLable" destination="pjc-Ak-j6m" id="joX-zM-xWi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZg-wy-4zg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1449" y="216"/>
+        </scene>
+    </scenes>
+</document>

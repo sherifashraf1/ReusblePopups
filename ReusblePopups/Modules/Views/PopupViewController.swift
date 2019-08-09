@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PopupViewController.swift
 //  ReusblePopups
 //
 //  Created by Sherif on 8/9/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DatePopupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-
