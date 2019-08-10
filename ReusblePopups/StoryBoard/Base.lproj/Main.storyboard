@@ -131,6 +131,9 @@
                     <navigationItem key="navigationItem" id="X2N-VG-SoZ">
                         <barButtonItem key="rightBarButtonItem" title="Select Date" id="wUo-OC-WN8"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextLabel" destination="rI4-bV-ho7" id="Ioq-I6-IgY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UP-dU-gEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
