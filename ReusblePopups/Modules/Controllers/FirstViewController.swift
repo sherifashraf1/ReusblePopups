@@ -16,8 +16,6 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(handlePopUpClosing), name: .SaveDateTime, object: nil)
-        
-    
     }
     
     @objc func handlePopUpClosing(notification : Notification){

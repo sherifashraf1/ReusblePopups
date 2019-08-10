@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ubI-p0-fjq">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,26 +11,26 @@
             <objects>
                 <viewController id="57e-sp-Ayw" customClass="SecondViewController" customModule="ReusblePopups" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZo-L8-r1W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vif-WB-r5d">
-                                <rect key="frame" x="137.66666666666666" y="396" width="99.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="250.5" y="290" width="99.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UdI-JB-64q">
-                                <rect key="frame" x="20" y="64" width="335" height="30"/>
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUU-jQ-DSk">
-                                        <rect key="frame" x="0.0" y="0.0" width="244.66666666666666" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="469.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Og-2V-oCP">
-                                        <rect key="frame" x="254.66666666666671" y="0.0" width="80.333333333333343" height="30"/>
+                                        <rect key="frame" x="479.5" y="0.0" width="80.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80.329999999999998" id="xiH-aQ-blU"/>
                                         </constraints>
@@ -68,6 +64,9 @@
                     <navigationItem key="navigationItem" id="eQE-lJ-kUF">
                         <barButtonItem key="rightBarButtonItem" title="Select Date" id="VYP-c0-aOV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextLabel" destination="GUU-jQ-DSk" id="pHf-On-wTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGx-vV-hWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,26 +77,26 @@
             <objects>
                 <viewController id="mng-NW-Piu" customClass="FirstViewController" customModule="ReusblePopups" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4WY-Je-Ut1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv6-u9-rA3">
-                                <rect key="frame" x="150.33333333333334" y="396" width="74.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="262.5" y="290" width="75" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RdG-WU-XBQ">
-                                <rect key="frame" x="20" y="64" width="335" height="30"/>
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI4-bV-ho7">
-                                        <rect key="frame" x="0.0" y="0.0" width="245" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="470" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IN-Hz-LdU">
-                                        <rect key="frame" x="255" y="0.0" width="80" height="30"/>
+                                        <rect key="frame" x="480" y="0.0" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="FXS-1M-oon"/>
                                         </constraints>
@@ -187,6 +186,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oWF-au-VUK"/>
+        <segue reference="O5O-rJ-dda"/>
     </inferredMetricsTieBreakers>
 </document>
