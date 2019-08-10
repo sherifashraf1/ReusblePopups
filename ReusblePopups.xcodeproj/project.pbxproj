@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E037AE0E22FF18A400F4AF20 /* NotificationCenter + Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = E037AE0D22FF18A400F4AF20 /* NotificationCenter + Name.swift */; };
 		E0E5E59E22FCE630007BC675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E5E59D22FCE630007BC675 /* AppDelegate.swift */; };
 		E0E5E5A022FCE630007BC675 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E5E59F22FCE630007BC675 /* FirstViewController.swift */; };
 		E0E5E5A322FCE630007BC675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0E5E5A122FCE630007BC675 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E037AE0D22FF18A400F4AF20 /* NotificationCenter + Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter + Name.swift"; sourceTree = "<group>"; };
 		E0E5E59A22FCE630007BC675 /* ReusblePopups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReusblePopups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E5E59D22FCE630007BC675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0E5E59F22FCE630007BC675 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				E0E5E5B022FCE9F4007BC675 /* Assets */,
+				E037AE0D22FF18A400F4AF20 /* NotificationCenter + Name.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				E0E5E5B222FCEC4A007BC675 /* SecondViewController.swift in Sources */,
 				E0E5E5C422FD17B5007BC675 /* SelectTimeViewController.swift in Sources */,
+				E037AE0E22FF18A400F4AF20 /* NotificationCenter + Name.swift in Sources */,
 				E0E5E5BB22FCF0C1007BC675 /* DatePopupViewController.swift in Sources */,
 				E0E5E5A022FCE630007BC675 /* FirstViewController.swift in Sources */,
 				E0E5E59E22FCE630007BC675 /* AppDelegate.swift in Sources */,

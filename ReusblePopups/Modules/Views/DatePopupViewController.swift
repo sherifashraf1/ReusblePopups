@@ -29,6 +29,8 @@ class DatePopupViewController: UIViewController {
     }
     
     @IBAction func saveDate(_ sender: UIButton) {
+    
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Save Date"), object: self)
         
         dismiss(animated: true)
     }
