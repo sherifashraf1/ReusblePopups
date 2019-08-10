@@ -11,18 +11,21 @@ import UIKit
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var dateTextLabel : UILabel!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(handlePopUpClosing), name: .SaveDateTime, object: nil)
+    var observer : NSObjectProtocol?
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        observer = NotificationCenter.default.addObserver(forName: .SaveDateTime, object: nil, queue: OperationQueue.main, using: { (notification) in
+            let dateVc = notification.object as! DatePopupViewController
+            self.dateTextLabel.text = dateVc.formatterDate
+        })
     }
     
-    @objc func handlePopUpClosing(notification : Notification){
-        
-        let dateVc = notification.object as! DatePopupViewController
-            dateTextLabel.text = dateVc.formatterDate
-        
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
 }
