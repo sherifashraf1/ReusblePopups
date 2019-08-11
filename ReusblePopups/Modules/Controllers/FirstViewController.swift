@@ -13,6 +13,22 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var dateTextLabel : UILabel!
     var observer : NSObjectProtocol?
    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+        // that is the old way to listen the nofificatoins
+        //        NotificationCenter.default.addObserver(self, selector: #selector(handlePopUpClosing), name: .SaveDateTime, object: nil)
+        
+        //Second way to listen the notification
+
+//    }
+    
+    //    @objc func handlePopUpClosing(notification : Notification){
+    //        let dateVc = notification.object as! DatePopupViewController
+    //           dateTextLabel.text = dateVc.formatterTime
+    //    }
+
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         observer = NotificationCenter.default.addObserver(forName: .SaveDateTime, object: nil, queue: OperationQueue.main, using: { (notification) in

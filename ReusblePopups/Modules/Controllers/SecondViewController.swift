@@ -10,41 +10,23 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var dateTextLabel : UILabel!
-    weak var observer : NSObjectProtocol?
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-        // that is the old way to listen the nofificatoins
-//        NotificationCenter.default.addObserver(self, selector: #selector(handlePopUpClosing), name: .SaveDateTime, object: nil)
-   
-    //Second way to listen the notification
-    
-//    }
-    
-//    @objc func handlePopUpClosing(notification : Notification){
-//        let dateVc = notification.object as! DatePopupViewController
-//           dateTextLabel.text = dateVc.formatterTime
-//    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        observer = NotificationCenter.default.addObserver(forName: .SaveDateTime, object: nil, queue: OperationQueue.main) { (notification) in
-            let dateVc = notification.object as! DatePopupViewController
-            self.dateTextLabel.text = dateVc.formatterDate
-        }
 
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        if let observer = observer {
-            NotificationCenter.default.removeObserver(observer)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDatePopupSegue"{
+            let popUp = segue.destination as! DatePopupViewController
+            popUp.showTimePicker = false
+//            popUp.onSave = onSave
+            popUp.onSave = {(data) in
+                self.dateTextLabel.text = data
+            }
         }
     }
     
-    
-    
-    }
+    //instead of this function we can use a closure on segue....
+//    func onSave(_ data : String)-> () {
+//        dateTextLabel.text = data
+//    }
+}
     
 
 
