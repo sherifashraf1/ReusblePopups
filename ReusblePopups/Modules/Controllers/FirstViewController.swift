@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var dateTextLabel : UILabel!
-    weak var observer : NSObjectProtocol?
+     var observer : NSObjectProtocol?
    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -31,7 +31,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        observer = NotificationCenter.default.addObserver(forName: .SaveDateTime, object: nil, queue: OperationQueue.main, using: { (notification) in
+        observer = NotificationCenter.default.addObserver(forName: .SaveDateTime, object: nil, queue: OperationQueue.main, using: {[unowned self] (notification) in
             let dateVc = notification.object as! DatePopupViewController
             self.dateTextLabel.text = dateVc.formatterDate
         })
