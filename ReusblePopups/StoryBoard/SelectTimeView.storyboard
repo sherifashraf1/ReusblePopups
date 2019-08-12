@@ -42,6 +42,9 @@
                         <viewLayoutGuide key="safeArea" id="jlD-DO-FCR"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="recents" id="0gq-Bm-Zys"/>
+                    <connections>
+                        <outlet property="timeTextLabel" destination="RyP-9H-qBR" id="WTB-dM-6IP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l75-Et-NUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

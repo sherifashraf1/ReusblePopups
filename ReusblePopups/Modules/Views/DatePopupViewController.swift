@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PopUpDelegate {
+    func popUPValueSelected(value : String)
+}
+
 class DatePopupViewController: UIViewController {
 
     @IBOutlet weak var titleLable: UILabel!
@@ -15,7 +19,7 @@ class DatePopupViewController: UIViewController {
     @IBOutlet weak var saveDate: UIButton!
     var showTimePicker = false
     var onSave : ((_ data : String)-> ())?
-    
+    var delegate : PopUpDelegate?
     func togglePicker(){
         if showTimePicker{
             titleLable.text = "Select Time"
@@ -32,10 +36,9 @@ class DatePopupViewController: UIViewController {
     
     var formatterTime : String{
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.timeStyle = .short
         return formatter.string(from: datePicker.date)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +48,14 @@ class DatePopupViewController: UIViewController {
     @IBAction func saveDate(_ sender: UIButton) {
     
         NotificationCenter.default.post(name: .SaveDateTime, object: self)
-        onSave?(formatterDate)
+        if showTimePicker{
+            onSave?(formatterTime)
+            delegate?.popUPValueSelected(value: formatterTime)
+        }else {
+            onSave?(formatterDate)
+            delegate?.popUPValueSelected(value: formatterDate)
+        }
+        
         dismiss(animated: true)
     }
     
