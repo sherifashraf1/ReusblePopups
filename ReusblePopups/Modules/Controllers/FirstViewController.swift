@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController {
     
     @IBOutlet weak var dateTextLabel : UILabel!
-    var observer : NSObjectProtocol?
+    weak var observer : NSObjectProtocol?
    
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
