@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PopUpDelegate {
+protocol PopUpDelegate : class {
     func popUPValueSelected(value : String)
 }
 
@@ -19,7 +19,7 @@ class DatePopupViewController: UIViewController {
     @IBOutlet weak var saveDate: UIButton!
     var showTimePicker = false
     var onSave : ((_ data : String)-> ())?
-    var delegate : PopUpDelegate?
+    weak var delegate : PopUpDelegate?
     func togglePicker(){
         if showTimePicker{
             titleLable.text = "Select Time"
